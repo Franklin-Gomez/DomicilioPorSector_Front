@@ -6,7 +6,7 @@ export const createAddress = async ( data : SectorPayloadType ) => {
 
     try {
 
-        const url = 'http://localhost:4000/api/sectors/'
+        const url = `${import.meta.env.VITE_API_URL}/api/sectors/`
 
         const resultado = await axios.post( url , data )
 
@@ -25,7 +25,7 @@ export const getAllSector = async () => {
 
     try {
 
-        const url = 'http://localhost:4000/api/sectors/'
+        const url = `${import.meta.env.VITE_API_URL}/api/sectors/`
 
         const resultado = await axios.get( url)
 
@@ -46,7 +46,7 @@ export const validateSectors = async () => {
 
     try {
 
-        const url = `http://localhost:4000/api/sectors/validate`
+        const url = `${import.meta.env.VITE_API_URL}/api/sectors/validate`
 
         const resultado = await axios.get( url)
         
